@@ -54,7 +54,7 @@ function RenderMovies(movies)
       <div class="card-body">
         <h3>${movie.Title}</h3>
         <p>${movie.Year} | ${movie.Type}</p>
-        <button onclick="fetchDetails('${movie.imdbID}')">Details</button>
+        <button onclick="fetchDetails('${movie.imdbID}')">Детали</button>
       </div>
     `;
     resultsDiv.appendChild(card);
@@ -94,10 +94,6 @@ function fetchDetails(imdbID)
           <p><strong>IMDB Rating:</strong> ${data.imdbRating}</p>
         `;
         detailsDiv.scrollIntoView({ behavior: "smooth" });
-      } 
-      else 
-      {
-        detailsDiv.innerHTML = `<div class="error-message">Details not available.</div>`;
       }
     })
 }
